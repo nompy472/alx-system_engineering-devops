@@ -1,0 +1,1 @@
+0-Switch current user 1-Print current username 2-Print groups for current user 3-Change owner of file 4-Creat empty file 5-Modify permission 6-Add execute permission 7-Add execute permission to owner and group users 8-Set permission to file 9-Set file mode 10-Make file mode similar 11-Add execute permission to all subdirectories 12-Creat directory 13-Change group owner
