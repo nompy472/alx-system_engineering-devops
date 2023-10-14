@@ -3,7 +3,19 @@
 # localhost resolves to 127.0.0.2
 # facebook.com resolves to 8.8.8.8
 
-cp /etc/hosts ~/hosts.new
-echo "127.0.0.2		localhost" > ~/hosts.new
-echo "8.8.8.8		facebook.com" >> ~/hosts.new
-cp -f ~/hosts.new /etc/hosts
+local_mapping="127.0.0.2 localhost"
+facebook_mapping="8.8.8.8 facebook.com"
+
+if grep -q "$local_mapping" /etc/hosts; then
+  echo "Localhost entry already exists in /etc/hosts."
+else
+  echo "$local_mapping" >> /etc/hosts
+  echo "Added localhost entry to /etc/hosts."
+fi
+
+if grep -q "$facebook_mapping" /etc/hosts; then
+  echo "Facebook entry already exists in /etc/hosts."
+else
+  echo "$facebook_mapping" >> /etc/hosts
+  echo "Added Facebook entry to /etc/hosts."
+fi
