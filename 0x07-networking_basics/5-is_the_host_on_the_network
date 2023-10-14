@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #Pings & IP
-ip_address="$1"
 
 if [ $# -ne 1 ]
 then
