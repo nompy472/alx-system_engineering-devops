@@ -1,12 +1,12 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Updating package lists and install Nginx
 sudo apt update
 sudo apt install -y nginx
 
-# Set the Nginx configuration file path
+# Sets the Nginx configuration file path
 nginx_conf="/etc/nginx/sites-available/default"
 
-# Add custom HTTP response header to Nginx configuration
+# Adds custom HTTP response header to Nginx configuration
 echo "server {" | sudo tee -a $nginx_conf
 echo "    listen 80 default_server;" | sudo tee -a $nginx_conf
 echo "    server_name _;" | sudo tee -a $nginx_conf
