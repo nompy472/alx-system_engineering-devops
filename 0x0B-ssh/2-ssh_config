@@ -1,4 +1,9 @@
 # ssh config file
 Host *
-      PasswordAuthentication no
-      IdentifyFile ~/.ssh/school
+        PasswordAuthentication no
+        IdentityFile ~/.ssh/school
+        PubkeyAuthentication yes
+        AuthorizedKeysFile  .ssh/authorized_keys
+        HashKnownHosts yes
+        GSSAPIAuthentication yes
+        GSSAPIDelegateCredentials no
